@@ -21,7 +21,6 @@
 #define SL LG(LEFT) // Move a Space Left
 #define SR LG(RIGHT) // Move a Space Right
 #define MC LG(UP) // Mission Control
-#define SCRS TD(TD_SCREEN) // Screenshot to Clipboard (One Tap) or to Desktop (Two Taps)
 #define ST LC(LS(LA(EQL))) // Shade: Toggle On/Off
 #define SD LC(LS(LA(LBRC))) // Shade: Brightness Up
 #define SU LC(LS(LA(RBRC))) // Shade: Brightness Down
