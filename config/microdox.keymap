@@ -13,11 +13,11 @@
 #define NSL  2
 #define NSSL 3
 #define FUNL 4
-#define MEDR 5
+#define MOUS 5
+#define MEDR 6
 
 #define A_SFW LG(LA(LS(H))) // Amethyst: Swap Focused Window to Clockwise Screen
-#define A_RR TD(TD_RR) // Amethyst: Reset Amethyst (One Tap) or Reset Auto Rais (Two Taps)
-#define BCK LC(LBRC) // Navigate Back
+#define BCK LC(LBKT) // Navigate Back
 #define SL LG(LEFT) // Move a Space Left
 #define SR LG(RIGHT) // Move a Space Right
 #define MC LG(UP) // Mission Control
@@ -37,6 +37,17 @@
 };
 
 / {
+
+        behaviors {
+                A_RR: tap_dance_0 {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "A_RR";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp LC(LS(LA(Z)))>, <&kp LC(LS(LA(X)))>; // Amethyst: Reset Amethyst (One Tap) or Reset Auto Rais (Two Taps)
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -82,6 +93,15 @@
    &kp F11 &kp F4 &kp F5 &kp F6 &trans     &trans &trans &trans &trans &kp LALT
    &kp F10 &kp F1 &kp F2 &kp F3 &trans     &trans &trans &trans &trans &kp LALT
                   &trans &trans &trans     &trans &trans &trans
+                        >;
+                };
+
+                mous_layer {
+                        bindings = <
+   &trans    &trans   &trans &trans    &A_RR     &kp BCK &kp SL &kp MC &kp MC &kp SR
+   &kp THR_L &trans   &trans &kp THR_R &trans       &trans  &trans &trans &trans &trans
+   &A_RR     &A_RR    &trans &trans    &trans       &trans  &trans &trans &trans &trans
+                      &trans &trans    &trans       &trans  &trans &trans
                         >;
                 };
 
