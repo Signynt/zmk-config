@@ -47,7 +47,7 @@
    &mt LALT Q  &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &mt LALT P
    &mt LSHFT A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &mt LSHFT SQT
    &mt LCTRL Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt LCTRL FSLH
-   &lt NAVR TAB &lt NAVR SPACE &kp ESC   &lt NAVR ENT &lt NSL BKSP &trans
+                        &trans &trans &trans &trans &trans &trans
                         >;
                 };
 
