@@ -22,11 +22,9 @@
 #define SR LG(RIGHT) // Move a Space Right
 #define MC LG(UP) // Mission Control
 #define SCRS TD(TD_SCREEN) // Screenshot to Clipboard (One Tap) or to Desktop (Two Taps)
-#define ST MEH(EQL) // Shade: Toggle On/Off
-#define SD MEH(LBRC) // Shade: Brightness Up
-#define SU MEH(RBRC) // Shade: Brightness Down
-#define DPI_U POINTER_DEFAULT_DPI_FORWARD // Increase Trackball DPI
-#define DPI_D POINTER_DEFAULT_DPI_REVERSE // Decrease Trackball DPI
+#define ST LC(LS(LA(EQL))) // Shade: Toggle On/Off
+#define SD LC(LS(LA(LBRC))) // Shade: Brightness Up
+#define SU LC(LS(LA(RBRC))) // Shade: Brightness Down
 #define THR_R LC(LG(RIGHT)) //Throw the Active Window to the Space to the Right
 #define THR_L LC(LG(UP)) //Throw the Active Window to the Space to the Right
 #define TAB_L LC(LS(LEFT)) // Switch to the Tab to the Left
@@ -65,7 +63,34 @@
    &mt LALT LPRN   &kp N7 &kp N8    &kp N9 &kp RPRN       &kp LBKT  &kp AMPS &kp ASTRK &kp BSLH  &mt LALT RBKT
    &mt LSHFT COLON &kp N4 &kp N5    &kp N6 &kp EQUAL      &kp LBRC  &kp DLLR &kp PRCNT &kp CARET &mt LSHFT RBRC 
    &mt LCTRL GRAVE &kp N1 &kp N2    &kp N3 &kp PLUS       &kp TILDE &kp EXCL &kp COMMA &kp DOT   &mt LCTRL SLASH
-                          &kp UNDER &kp N0 &kp MINUS      &kp MINUS &trans
+                          &kp UNDER &kp N0 &kp MINUS      &kp MINUS &trans   &trans
+                        >;
+                };
+
+                nssl_layer {
+                        bindings = <
+   &mt LALT LBRC   &kp AMPS &kp ASTRK &kp LPAR  &kp RBRC     &kp LBKT  &kp AMPS &kp ASTRK &kp BSLH  &mt LALT RBKT
+   &mt LSHFT SEMI  &kp DLLR &kp PRCNT &kp CARET &kp PLUS     &kp LBRC  &kp DLLR &kp PRCNT &kp CARET &mt LSHFT RBRC 
+   &mt LCTRL TILDE &kp EXCL &kp AT    &kp HASH  &kp PIPE     &kp TILDE &kp EXCL &kp COMMA &kp DOT   &mt LCTRL SLASH
+                            &mo FUNL  &kp SPACE &kp MINUS    &kp MINUS &kp LGUI &trans
+                        >;
+                };
+                
+                funl_layer {
+                        bindings = <
+   &kp F12 &kp F7 &kp F8 &kp F9 &trans     &trans &trans &trans &trans &kp LALT
+   &kp F11 &kp F4 &kp F5 &kp F6 &trans     &trans &trans &trans &trans &kp LALT
+   &kp F10 &kp F1 &kp F2 &kp F3 &trans     &trans &trans &trans &trans &kp LALT
+                  &trans &trans &trans     &trans &trans &trans
+                        >;
+                };
+
+                medr_layer {
+                        bindings = <
+   &reset &trans &trans &trans &trans      &trans &trans     &trans       &trans       &trans
+   &trans &trans &trans &trans &trans      &trans &kp K_PREV &kp K_VOL_UP &kp K_VOL_DN &kp K_NEXT
+   &trans &trans &trans &trans &trans      &kp ST &trans     &kp SD       &kp SU       &trans
+         &trans &kp K_MUTE &kp K_STOP      &kp K_STOP &kp K_PP &trans
                         >;
                 };
         };
