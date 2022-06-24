@@ -46,6 +46,14 @@
                     tapping-term-ms = <200>;
                     bindings = <&kp LC(LS(LA(Z)))>, <&kp LC(LS(LA(X)))>; // Amethyst: Reset Amethyst (One Tap) or Reset Auto Rais (Two Taps)
                 };
+
+                SCRS: tap_dance_1 {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "SCRS";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <200>;
+                    bindings = <&kp LG(LS(S))>, <&kp LC(LS(N4))>;  // Screenshot to Clipboard (One Tap) or to Desktop (Two Taps)               
+                };
         };
 
         keymap {
@@ -98,9 +106,9 @@
 
                 mous_layer {
                         bindings = <
-   &trans    &trans   &trans &trans    &A_RR     &kp BCK &kp SL &kp MC &kp MC &kp SR
+   &trans    &trans   &trans &trans    &A_RR        &kp BCK &kp SL &kp MC &kp MC &kp SR
    &kp THR_L &trans   &trans &kp THR_R &trans       &trans  &trans &trans &trans &trans
-   &A_RR     &A_RR    &trans &trans    &trans       &trans  &trans &trans &trans &trans
+   &kp A_SFW &SCRS    &trans &trans    &trans       &trans  &trans &trans &trans &trans
                       &trans &trans    &trans       &trans  &trans &trans
                         >;
                 };
