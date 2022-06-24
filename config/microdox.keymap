@@ -53,10 +53,10 @@
 
                 navr_layer {
                         bindings = <
-   &kp LGUI  &trans    &trans    &trans  &trans      &caps_word &kp TAB_L &kp TAB_D &kp TAB_U &kp TAB_R
-   &kp LGUI  &kp LSHFT &kp LCTRL &kp ALT &trans      &kp CLCK   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
-   &kp LCTRL &trans    &trans    &trans  &trans      &kp INS    &kp HOME  &kp PG_DN &kp PG_UP &kp END
-                       &trans    &trans  &kp ENT     &kp ENT    &kp DEL   &trans
+   &kp LGUI  &trans    &trans    &trans   &trans      &caps_word &kp TAB_L &kp TAB_D &kp TAB_U &kp TAB_R
+   &kp LGUI  &kp LSHFT &kp LCTRL &kp LALT &trans      &kp CLCK   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+   &kp LCTRL &trans    &trans    &trans   &trans      &kp INS    &kp HOME  &kp PG_DN &kp PG_UP &kp END
+                       &trans    &trans   &kp ENT     &kp ENT    &kp DEL   &trans
                         >;
                 };
 
