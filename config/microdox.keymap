@@ -8,64 +8,64 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define BASE 0
+#define NAVR 1
+#define NSL  2
+#define NSSL 3
+#define FUNL 4
+#define MEDR 5
+
+#define A_SFW LG(LA(LS(H))) // Amethyst: Swap Focused Window to Clockwise Screen
+#define A_RR TD(TD_RR) // Amethyst: Reset Amethyst (One Tap) or Reset Auto Rais (Two Taps)
+#define BCK LC(LBRC) // Navigate Back
+#define SL LG(LEFT) // Move a Space Left
+#define SR LG(RIGHT) // Move a Space Right
+#define MC LG(UP) // Mission Control
+#define SCRS TD(TD_SCREEN) // Screenshot to Clipboard (One Tap) or to Desktop (Two Taps)
+#define ST MEH(EQL) // Shade: Toggle On/Off
+#define SD MEH(LBRC) // Shade: Brightness Up
+#define SU MEH(RBRC) // Shade: Brightness Down
+#define DPI_U POINTER_DEFAULT_DPI_FORWARD // Increase Trackball DPI
+#define DPI_D POINTER_DEFAULT_DPI_REVERSE // Decrease Trackball DPI
+#define THR_R LC(LG(RIGHT)) //Throw the Active Window to the Space to the Right
+#define THR_L LC(LG(UP)) //Throw the Active Window to the Space to the Right
+#define TAB_L LC(LS(LEFT)) // Switch to the Tab to the Left
+#define TAB_R LC(LS(RIGHT)) // Switch to the Tab to the Right
+#define TAB_U LC(LS(UP)) // Switch to the Tab Above
+#define TAB_D LC(LS(DOWN)) // Switch to the Tab Below
+
+&mt {
+    tapping-term-ms = <160>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
+                base_layer {
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-          &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp RALT
-                        >;
-                };
-                nav_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
-                        bindings = <
-   &bt BT_CLR   &trans      &kp ESC  &kp TILDE &trans     &kp TAB  &kp HOME &kp UP   &kp END   &kp DEL
-   &bt BT_SEL 0 &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-   &bt BT_SEL 1 &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
-                            &trans   &trans    &trans     &trans   &trans   &trans
+   &mt LALT Q  &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &mt LALT P
+   &mt LSHFT A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &mt LSHFT SQT
+   &mt LCTRL Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &mt LCTRL FSLH
+   &lt MEDR TAB &lt NAVR SPACE &kp ESC   &lt NSSL ENT &lt NSL BKSP &trans
                         >;
                 };
 
-                sym_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
+                navr_layer {
                         bindings = <
-   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE
-   &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH
-                       &kp LGUI  &trans    &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp LGUI  &trans    &trans    &trans  &trans      &caps_word &kp TAB_L &kp TAB_D &kp TAB_U &kp TAB_R
+   &kp LGUI  &kp LSHFT &kp LCTRL &kp ALT &trans      &kp CLCK   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+   &kp LCTRL &trans    &trans    &trans  &trans      &kp INS    &kp HOME  &kp PG_DN &kp PG_UP &kp END
+                       &trans    &trans  &kp ENT     &kp ENT    &kp DEL   &trans
                         >;
                 };
 
-// This layer is unreachable until "tri layer state" is sorted out.
-// Leaving it here for completeness.
-                num_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
-//             |     |     |     |   |  0  |  .  |     |
+                nsl_layer {
                         bindings = <
-   &trans &trans &trans &trans &trans    &kp A  &kp N7  &kp N8 &kp N9 &kp D
-   &trans &trans &trans &trans &trans    &kp B  &kp N4  &kp N5 &kp N6 &kp E
-   &trans &trans &trans &trans &trans    &kp C  &kp N1  &kp N2 &kp N3 &kp F
-                 &trans &trans &trans    &kp N0 &kp DOT &trans
+   &mt LALT LPRN   &kp N7 &kp N8    &kp N9 &kp RPRN       &kp LBRC  &kp AMPS &kp ASTRK &kp BSLH  &mt LALT RBRC
+   &mt LSHFT COLON &kp N4 &kp N5    &kp N6 &kp EQUAL      &kp LCBR  &kp DLLR &kp PRCNT &kp CARET &mt LSHFT RCBR 
+   &mt LCTRL GRAVE &kp N1 &kp N2    &kp N3 &kp PLUS       &kp TILDE &kp EXCL &kp COMMA &kp DOT   &mt LCTRL SLASH
+                          &kp UNDER &kp N0 &kp MINUS      &kp MINUS &trans
                         >;
                 };
         };
