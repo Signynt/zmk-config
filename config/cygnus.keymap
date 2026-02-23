@@ -21,7 +21,6 @@
 #define GAME 7
 #define SECGAME 8
 
-#define RST C_RESET
 #define Y_TERM LG(LA(LS(T))) // Yabai: Terminal Scratchpad
 #define Y_CALE LG(LA(LS(B))) // Yabai: Calendar Scratchpad
 #define Y_SPOT LG(LA(LS(S))) // Yabai: Spotify Scratchpad
@@ -117,10 +116,10 @@
 
                 medr_layer {
                         bindings = <
-&kp RST &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans &trans     &trans       &trans       &bt BT_CLR_ALL
-&bt BT_CLR &bt BT_PRV &trans      &trans       &bt BT_NXT   &trans &kp K_PREV &kp K_VOL_UP &kp K_VOL_DN &kp K_NEXT
-&trans     &trans     &trans      &trans       &trans       &kp ST &trans     &kp SD       &kp SU       &trans
-                      &trans      &kp K_MUTE   &kp K_STOP   &kp K_STOP &kp K_PP &trans
+&bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans &trans     &trans       &trans       &bt BT_CLR_ALL
+&bt BT_CLR &bt BT_PRV &trans      &trans       &bt BT_NXT   &trans &kp C_PREV &kp K_VOL_DN &kp K_VOL_UP &kp C_NEXT
+&trans     &trans     &trans      &trans       &trans       &trans &trans     &kp C_BRI_DN &kp C_BRIUP  &trans
+                      &trans      &kp K_MUTE   &kp C_STOP   &kp C_STOP &kp C_PP &trans
                         >;
                 };
                 
@@ -135,10 +134,10 @@
                 
                 sec_game_layer {
                         bindings = <
-                    &kp ESC   &kp 7 &kp 8 &kp 9 &trans      &trans &trans &kp F7 &kp F8 &kp F9
-                    &kp LSHFT &kp 4 &kp 5 &kp 6 &trans      &trans &trans &kp F4 &kp F5 &kp F6
-                    &kp LCTRL &kp 1 &kp 2 &kp 3 &trans      &trans &trans &kp F1 &kp F2 &kp F3
-                                  &kp TAB &kp 0 &trans      &kp ENTER &kp BSPC &kp RALT
+                 &kp ESC   &kp N7 &kp N8 &kp N9 &trans      &trans &trans &kp F7 &kp F8 &kp F9
+                 &kp LSHFT &kp N4 &kp N5 &kp N6 &trans      &trans &trans &kp F4 &kp F5 &kp F6
+                 &kp LCTRL &kp N1 &kp N2 &kp N3 &trans      &trans &trans &kp F1 &kp F2 &kp F3
+                                 &kp TAB &kp N0 &trans      &kp ENTER &kp BSPC &kp RALT
                         >;
                 };
         };
