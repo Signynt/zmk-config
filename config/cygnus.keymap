@@ -118,7 +118,7 @@
                         bindings = <
 &bootloader &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans &trans     &trans       &trans       &bt BT_CLR_ALL
 &bt BT_CLR &bt BT_PRV &trans      &trans       &bt BT_NXT   &trans &kp C_PREV &kp K_VOL_DN &kp K_VOL_UP &kp C_NEXT
-&trans     &trans     &trans      &trans       &trans       &trans &trans     &kp C_BRI_DN &kp C_BRIUP  &trans
+&trans     &trans     &trans      &trans       &trans       &trans &trans     &kp C_BRI_DN &kp C_BRI_UP  &trans
                       &trans      &kp K_MUTE   &kp C_STOP   &kp C_STOP &kp C_PP &trans
                         >;
                 };
