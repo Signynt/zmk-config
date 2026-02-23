@@ -105,10 +105,10 @@
 
                 mous_layer {
                         bindings = <
-          &Y_TERM   &Y_SPOT &Y_CALE &Y_WAPP   &Y_MAIL       &kp BCK &kp SL         &kp MC         &kp MC       &kp SR
-          &kp THR_L &trans  &trans  &kp THR_R &Y_RR         &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
-          &kp Y_SFW &SCRS   &trans  &trans    &trans        &trans  &trans         &msc SCRL_DOWN &msc SCRL_UP &trans
-                            &trans  &trans    &trans        &mkp LCLK &mkp MCLK &mkp RCLK
+&kp Y_TERM &kp Y_SPOT &kp Y_CALE &kp Y_WAPP &kp Y_MAIL      &kp BCK &kp SL         &kp MC         &kp MC       &kp SR
+&kp THR_L  &trans     &trans     &kp THR_R  &kp Y_RR        &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
+&kp Y_SFW  &SCRS      &trans     &trans     &trans          &trans  &trans         &msc SCRL_DOWN &msc SCRL_UP &trans
+                      &trans     &trans     &trans          &mkp LCLK &mkp MCLK &mkp RCLK
                         >;
                 };
 
