@@ -126,7 +126,7 @@
                      &kp ESC   &kp Q &kp W &kp E &kp R      &kp T &kp Y &kp U &kp I     &tog GAME
                      &kp LSHFT &kp A &kp S &kp D &kp F      &kp G &kp H &kp J &kp K     &kp L
                      &kp LCTRL &kp Z &kp X &kp C &kp V      &kp B &kp N &kp M &kp COMMA &kp DOT
-                         &kp TAB &kp SPACE &kp SECGAME      &kp ENTER &kp BSPC &trans
+                         &kp TAB &kp SPACE &mo SECGAME      &kp ENTER &kp BSPC &trans
                         >;
                 };
                 
