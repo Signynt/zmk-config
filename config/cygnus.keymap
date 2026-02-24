@@ -32,9 +32,6 @@
 #define SL LG(LEFT) // Move a Space Left
 #define SR LG(RIGHT) // Move a Space Right
 #define MC LG(UP) // Mission Control
-#define ST LG(LA(LS(EQL))) // Shade: Toggle On/Off
-#define SD LG(LA(LS(LBKT))) // Shade: Brightness Up
-#define SU LG(LA(LS(RBKT))) // Shade: Brightness Down
 #define THR_R LC(LG(RIGHT)) //Throw the Active Window to the Space to the Right
 #define THR_L LC(LG(LEFT)) //Throw the Active Window to the Space to the Right
 #define TAB_L LC(LS(LEFT)) // Switch to the Tab to the Left
