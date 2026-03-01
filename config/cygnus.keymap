@@ -40,7 +40,7 @@
 #define TAB_D LC(LS(DOWN)) // Switch to the Tab Below
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <160>;
     flavor = "balanced";
 };
 
