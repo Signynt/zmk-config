@@ -23,7 +23,7 @@
 
 #define Y_TERM LG(LA(LS(T))) // Yabai: Terminal Scratchpad
 #define Y_CALE LG(LA(LS(B))) // Yabai: Calendar Scratchpad
-#define Y_SPOT LG(LA(LS(S))) // Yabai: Spotify Scratchpad
+#define Y_SPOT LG(LA(LS(Y))) // Yabai: Spotify Scratchpad
 #define Y_WAPP LG(LA(LS(F))) // Yabai: Whatsapp Scratchpad
 #define Y_MAIL LG(LA(LS(M))) // Yabai: Mail Scratchpad
 #define Y_SFW LG(LA(LS(H))) // Yabai: Swap Focused Window to Clockwise Screen
