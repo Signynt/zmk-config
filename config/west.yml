@@ -14,6 +14,6 @@ manifest:
       import: app/west.yml
     - name: zmk-usb-reporting
       remote: signynt
-      revision: main
+      revision: cygnus-battery-reporting
   self:
     path: config
